@@ -20,4 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "petconnect-android-app"
-include(":app")
+include(":presentation")
+include(":domain")
+include(":data")
