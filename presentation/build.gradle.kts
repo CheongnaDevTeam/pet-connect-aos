@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -12,12 +15,15 @@ plugins {
 android {
     namespace = "com.kkjang.petconnect"
 
+    val localProperties = Properties()
+    localProperties.load(FileInputStream(rootProject.file("keystore.properties")))
+
     signingConfigs {
         create("release") {
-            storePassword = "petconnect001!@"
-            keyAlias = "petconnect"
-            keyPassword = "petconnect001!@"
             storeFile = file("../keystore")
+            storePassword = file("../keystore.properties").readText().trim()
+            keyAlias = file("../keystore.properties").readText().trim()
+            keyPassword = file("../keystore.properties").readText().trim()
         }
     }
 
@@ -25,7 +31,7 @@ android {
 
     defaultConfig {
         applicationId = "com.kkjang.petconnect"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -50,7 +56,7 @@ android {
             isMinifyEnabled = false
             multiDexEnabled = true
             signingConfig = signingConfigs.getByName("debug")
-
+            manifestPlaceholders["enableCrashlytics"] = "false"
             proguardFiles(getDefaultProguardFile("proguard-android.txt"),"proguard-rules.pro")
             buildConfigField("boolean","DEBUG_VALUE","false")
         }
@@ -61,6 +67,7 @@ android {
             isMinifyEnabled = true
             multiDexEnabled = true
             signingConfig = signingConfigs.getByName("release")
+            manifestPlaceholders["enableCrashlytics"] = "true"
             multiDexKeepProguard = file("multidex-config.pro")
             proguardFiles(getDefaultProguardFile("proguard-android.txt"),"proguard-rules.pro")
             buildConfigField("boolean","DEBUG_VALUE","true")
@@ -193,6 +200,16 @@ dependencies {
     implementation(libs.google.play.services.location)
     implementation(libs.ted.park.permission)
 
+    // Kakao Lib
+    implementation(libs.kakao.all)
+    implementation(libs.kakao.user)
+    implementation(libs.kakao.share)
+    implementation(libs.kakao.talk)
+    implementation(libs.kakao.friend)
+    implementation(libs.kakao.navi)
+    implementation(libs.kakao.cert)
+
+    // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
