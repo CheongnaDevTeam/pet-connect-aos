@@ -19,3 +19,6 @@ local.properties
 .idea/misc.xml
 .idea/kotlinc.xml
 .idea/compiler.xml
+.kotlin/sessions/kotlin-compiler-125315697172171217.salive
+.idea/inspectionProfiles/Project_Default.xml
+.idea/deploymentTargetSelector.xml
