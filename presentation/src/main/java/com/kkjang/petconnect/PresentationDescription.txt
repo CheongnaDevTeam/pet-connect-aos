@@ -1,0 +1,6 @@
+* Presentation Layer
+- feature
+    - main
+    - splash
+    - ui/theme
+- App.kt
