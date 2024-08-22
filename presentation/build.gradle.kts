@@ -149,9 +149,6 @@ android {
 
 dependencies {
 
-    implementation(project(":data"))
-    implementation(project(":domain"))
-
     implementation(libs.android.support.multidex)
     implementation(libs.multidex)
     coreLibraryDesugaring(libs.desugar.jdk)

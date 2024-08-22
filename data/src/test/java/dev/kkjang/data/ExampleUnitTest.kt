@@ -1,4 +1,4 @@
-package com.kkjang.data
+package dev.kkjang.data
 
 import org.junit.Test
 
