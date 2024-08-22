@@ -1,4 +1,4 @@
-package com.kkjang.domain
+package dev.kkjang.domain
 
 import org.junit.Test
 
