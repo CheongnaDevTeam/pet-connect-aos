@@ -110,6 +110,10 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
+    configurations.implementation {
+        exclude(group = "com.intellij", module = "annotations")
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -148,6 +152,10 @@ android {
 }
 
 dependencies {
+
+    implementation(project(":data"))
+    implementation(project(":domain"))
+
 
     implementation(libs.android.support.multidex)
     implementation(libs.multidex)
@@ -189,6 +197,9 @@ dependencies {
 
     // Coil
     implementation(libs.coil)
+
+    // Glide
+    implementation(libs.glide)
 
     // Timber
     implementation(libs.timber)
