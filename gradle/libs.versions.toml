@@ -156,5 +156,3 @@ org-jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "o
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "jetbranis-compose"}
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose" , version.ref = "kotlin" }
 
-
-
