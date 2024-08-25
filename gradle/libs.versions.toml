@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.2"
-kotlin = "2.0.0"
+kotlin = "1.9.0"
+compose = "2.0.20"
 ksp = "2.0.10-RC2-1.0.24"
 kapt = "1.5.30"
 coreKtx = "1.13.1"
@@ -49,6 +50,11 @@ kakao-sdk = "2.20.3"
 # TedPermission
 ted-park-permission = "3.3.0"
 
+# Glide
+glide = "2.3.3"
+
+
+
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
@@ -86,6 +92,9 @@ dagger-hilt-comiler = { group = "com.google.dagger", name = "hilt-compiler", ver
 
 # coil
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+# Glide
+glide = { group = "com.github.skydoves", name = "landscapist-glide", version.ref = "glide" }
 
 # jetbrains
 org-jetbrains-kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx-coroutines-core" }
@@ -143,7 +152,7 @@ kakao-cert = { group = "com.kakao.sdk", name = "v2-cert", version.ref = "kakao-s
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "compose" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
@@ -154,5 +163,5 @@ androidx-navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotli
 kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 org-jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "org-jetbrains-kotlin-android" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "jetbranis-compose"}
-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose" , version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose" , version.ref = "compose" }
 

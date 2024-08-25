@@ -38,6 +38,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
+    // Timber
+    implementation(libs.timber)
+
     // Okhttp
     implementation(libs.okhttp3)
     implementation(libs.okhttp.urlconnection)

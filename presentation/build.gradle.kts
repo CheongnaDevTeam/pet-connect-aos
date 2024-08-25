@@ -110,6 +110,10 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
+    configurations.implementation {
+        exclude(group = "com.intellij", module = "annotations")
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -193,6 +197,9 @@ dependencies {
 
     // Coil
     implementation(libs.coil)
+
+    // Glide
+    implementation(libs.glide)
 
     // Timber
     implementation(libs.timber)

@@ -44,6 +44,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
+    // Timber
+    implementation(libs.timber)
+
     // Hilt
     kapt(libs.dagger.hilt.comiler)
     implementation(libs.dagger.hilt)
@@ -68,14 +71,24 @@ dependencies {
 
     // room
     implementation(libs.room)
-    implementation(libs.room.common)
     implementation(libs.room.ktx)
-    implementation(libs.room.compiler)
-    implementation(libs.room.rxjava2)
-    implementation(libs.room.rxjava3)
-    implementation(libs.room.guava)
-    implementation(libs.room.testing)
-    implementation(libs.room.paging)
+    kapt(libs.room.compiler)
+    testImplementation(libs.room.testing)
+
+    // Kakao Lib
+    implementation(libs.kakao.all)
+    implementation(libs.kakao.user)
+    implementation(libs.kakao.share)
+    implementation(libs.kakao.talk)
+    implementation(libs.kakao.friend)
+    implementation(libs.kakao.navi)
+    implementation(libs.kakao.cert)
+
+//    implementation(libs.room.common)
+//    implementation(libs.room.rxjava2)
+//    implementation(libs.room.rxjava3)
+//    implementation(libs.room.guava)
+//    implementation(libs.room.paging)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
