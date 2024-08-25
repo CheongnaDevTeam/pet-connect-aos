@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">petconnect-android-app</string>
+    <string name="login_start_title">Hello. PetConnect App</string>
 </resources>
