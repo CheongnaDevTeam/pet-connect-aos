@@ -34,8 +34,7 @@ object NetModule {
     @Singleton
     @Provides
     fun provideOkHttp(
-        loggingInterceptor: HttpLoggingInterceptor,
-        application: Application
+        loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder().apply {
             connectTimeout(30, TimeUnit.SECONDS)
