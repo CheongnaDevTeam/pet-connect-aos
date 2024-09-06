@@ -1,4 +1,4 @@
-* Data Layter
+* Data Layer
 - api
 - dto
 - mapper
