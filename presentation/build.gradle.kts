@@ -177,6 +177,7 @@ dependencies {
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui)
     implementation(libs.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.navigation.dynamic.feature.fragment)
     implementation(libs.navigation.testing)
 
