@@ -25,6 +25,7 @@ class AuthorizationInterceptor : Interceptor {
             e.printStackTrace()
             val msg = when (e) {
                 is SocketTimeoutException -> "Timeout - Please check your internet connection"
+                is NullPointerException -> "NullPoint Exception"
                 is UnknownHostException -> "Unable to make a connection. Please check your internet"
                 is ConnectionShutdownException -> "Connection shutdown. Please check your internet"
                 is IOException -> "Server is unreachable, please try again later."
