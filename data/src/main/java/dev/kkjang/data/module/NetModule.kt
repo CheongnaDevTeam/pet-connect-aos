@@ -62,8 +62,8 @@ object NetModule {
         val httpLoggingInterceptor = HttpLoggingInterceptor().apply {
             level =
                 HttpLoggingInterceptor.Level.BODY
-//                if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
-//                else HttpLoggingInterceptor.Level.NONE
+                if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
+                else HttpLoggingInterceptor.Level.NONE
         }
         return httpLoggingInterceptor
     }
