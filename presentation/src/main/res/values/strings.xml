@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">petconnect-android-app</string>
     <string name="login_start_title">Hello. PetConnect App</string>
+
+    <!-- 공통 -->
+    <string name="btn_confirm_title">확인</string>
+
+
+    <!-- 앱 권한 페이지 텍스트 -->
+    <string name="permission_screen_title">앱 이용을 위해 \n권한 허용이 필요해요</string>
+    <string name="permission_fitness_title">동작 및 피트니스</string>
+    <string name="permission_fitness_sub_title">걸음 수 확인 및 표시</string>
+    <string name="permission_location_title">위치</string>
+    <string name="permission_location_sub_title">현재 위치 기반 주변 검색 제공</string>
+    <string name="permission_camera_title">카메라</string>
+    <string name="permission_camera_sub_title">프로필 사진 등록 시 사진 촬영</string>
+    <string name="permission_profile_title">사진</string>
+    <string name="permission_profile_sub_title">프로필 사진 등록 시 사진 첨부</string>
+    <string name="permission_notification_title">알림</string>
+    <string name="permission_notification_sub_title">주요 공지 알림 수신</string>
+    <string name="permission_save_title">저장</string>
+    <string name="permission_save_sub_title">서비스 이용을 위해 필요한 사진 및 파일 저장</string>
+
+    
 </resources>
